@@ -1,3 +1,3 @@
 # Android-Me-Fragment
 
-This is a Prcatical Fragment Implementation Demo
+This is a Practical Fragment Implementation Demo
