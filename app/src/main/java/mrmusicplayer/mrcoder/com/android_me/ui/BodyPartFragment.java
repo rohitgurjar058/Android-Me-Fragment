@@ -1,6 +1,5 @@
 package mrmusicplayer.mrcoder.com.android_me.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mrmusicplayer.mrcoder.com.android_me.R;
-import mrmusicplayer.mrcoder.com.android_me.data.AndroidImageAssets;
 
 /**
  * Created by rohit on 19/5/18.
@@ -44,7 +42,7 @@ public class BodyPartFragment extends Fragment {
             mListIndex = savedInstanceState.getInt(LIST_INDEX);
         }
 
-        //Infalte the fragment layout
+        //Inflate the fragment layout
         View rootView = inflater.inflate(R.layout.fragament_body_part,container,false);
 
         //Get the reference to the imageview in fregmant layout
