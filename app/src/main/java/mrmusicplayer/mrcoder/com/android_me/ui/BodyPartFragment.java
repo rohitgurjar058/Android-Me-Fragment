@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,12 @@ public class BodyPartFragment extends Fragment {
         {
             mImageIds = savedInstanceState.getIntegerArrayList(IMAGE_ID_LIST);
             mListIndex = savedInstanceState.getInt(LIST_INDEX);
+            Log.d(TAG, "onCreateView: "+mListIndex);
+            //Toast.makeText(getActivity(),"OnCreateView "+mListIndex,Toast.LENGTH_LONG).show();
         }
+
+        Log.d(TAG, "onCreateView1: "+mListIndex);
+        //Toast.makeText(getActivity(),"OnCreateView1 "+mListIndex,Toast.LENGTH_LONG).show();
 
         //Inflate the fragment layout
         View rootView = inflater.inflate(R.layout.fragament_body_part,container,false);
@@ -83,12 +89,13 @@ public class BodyPartFragment extends Fragment {
         mListIndex = index;
     }
 
-
     //Override OnSaveInstance State and saves the imageList and imageIndex
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putIntegerArrayList(IMAGE_ID_LIST, (ArrayList<Integer>)mImageIds);
         outState.putInt(LIST_INDEX,mListIndex);
+        Log.d(TAG, "onSaveInstanceState: "+mListIndex);
+        //Toast.makeText(getActivity(),"Bundle Index "+mListIndex,Toast.LENGTH_LONG).show();
         super.onSaveInstanceState(outState);
     }
 }
